@@ -188,7 +188,7 @@ function validation(){
                 $('.validAge2').addClass('d-none')
             }else if(!$('.age').val().toLowerCase().match(ageRegex)){
                 $('.validAge2').removeClass('d-none')
-                $('.validAge1').addClass('d-none')
+                $('.validAge').addClass('d-none')
             }
             else{
                 $('.validAge').addClass('d-none')
