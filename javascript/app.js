@@ -137,8 +137,9 @@ function validation(){
     let nameRegex = /^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$/,
         emailRegex =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{4})[- ]?(\d{4})$/,
-        passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-        if($('.name').val().toLowerCase().match(nameRegex) && $('.email').val().toLowerCase().match(emailRegex) && $('.phone').val().toLowerCase().match(phoneRegex) && $('.password').val().toLowerCase().match(passwordRegex) ){
+        passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,
+        ageRegex = /^(1[89]|[2-9]\d)$/;
+        if($('.name').val().toLowerCase().match(nameRegex) && $('.email').val().toLowerCase().match(emailRegex) && $('.phone').val().toLowerCase().match(phoneRegex) && $('.password').val().toLowerCase().match(passwordRegex) && $('.age').val().toLowerCase().match(ageRegex) ){
             if( $('.password').val().toLowerCase().match(passwordRegex) ==  $('.confirm').val().toLowerCase()){
                 $('.submit').removeClass('grayed')
             }else{
@@ -181,6 +182,19 @@ function validation(){
                 $('.validConfirm').addClass('d-none')
             }
         })
+        $('.age').keyup(function(){
+            if($(this).val() < 18){
+                $('.validAge').removeClass('d-none')
+                $('.validAge2').addClass('d-none')
+            }else if(!$('.age').val().toLowerCase().match(ageRegex)){
+                $('.validAge2').removeClass('d-none')
+                $('.validAge1').addClass('d-none')
+            }
+            else{
+                $('.validAge').addClass('d-none')
+                $('.validAge2').addClass('d-none')
+            }
+        })
 }
 
 $(document).keyup(validation)
@@ -208,13 +222,6 @@ $('.showPassword2').click(function(){
         document.querySelector('.confirm').type = 'password'
 
         tracker2 = false
-    }
-})
-$('.age').keyup(function(){
-    if(this.value < 16){
-        document.querySelector('.validAge').classList.remove('d-none')
-    }else{
-        document.querySelector('.validAge').classList.add('d-none')
     }
 })
 let search = ``;
