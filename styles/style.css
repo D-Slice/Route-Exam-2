@@ -1,0 +1,123 @@
+body{
+    background-color: #000000f2;
+}
+.sideBar .main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100vh;
+    z-index: 55555555;
+    background-color: #f8f6f6;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+.logo img{
+    height: 48px;
+}
+.close i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.globe i, .share i{
+    cursor: pointer;
+}
+.content{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    height: 100vh;
+    z-index: 5555;
+    background-color: #000;
+    width: 0;
+    overflow: hidden;
+}
+.content ul{
+    padding-left: 30px;
+    overflow: hidden;
+}
+.content ul li{
+    padding-top: 25px;
+    color: #f9f6f6;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0;
+}
+.content ul li:hover, .content ul li a:hover, .links div:hover{
+    color: #ff655c !important;
+    transition: all 0.2s;
+}
+.socials-links{
+    display: flex;
+    padding-left: 30px;
+    color: white;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.socials-links div{
+    margin: 9px;
+    cursor: pointer;
+}
+.copyright{
+    color: #999;
+}
+input{
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.7) !important;
+    border-radius: 0;
+    color: #fff !important;
+}
+input:focus{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.7);
+    border-radius: 0;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+.overlay{
+    background-color: rgba(255,255,255,.7);
+    top: 100% !important;
+    overflow: hidden;
+    transition: all 0.8s;
+}
+.moviesCont .rounded:hover .overlay{
+    top: 0 !important;
+}
+.gap{
+    gap: 20px 0px;
+}
+.active{
+    color: #ff655c !important;
+    transition: all 0.2s;
+}
+.backUp{
+    font-size: 33px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: white;
+    padding: 3px;
+    width: 50px;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.showPassword, .showPassword2{
+    top: 6px;
+    right: 20px;
+    cursor: pointer;
+}
+.grayed{
+    color: #770610 !important;
+    border-color: #69040e !important;
+}
+.grayed:hover{
+    color: #770610 !important;
+    border-color: #69040e !important;
+    background-color: transparent !important;
+    cursor: default;
+}

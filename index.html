@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/all.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mediaQuery.css">
+    <title>Route Exam#2</title>
+</head>
+<body>
+
+    <button class="btn backUp d-none"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <section class="sideBar">
+        <div class="main d-flex flex-column justify-content-between py-4">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="close">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark d-none"></i>
+            </div>
+            <div class="icons">
+                <div class="globe">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="share">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+            </div>
+        </div>
+        <div class="content d-flex flex-column justify-content-between">
+            <div class="items">
+                    <ul class="text-white list-unstyled">
+                        <li class="item1">Now playing</li>
+                        <li class="item2">Popular</li>
+                        <li class="item3">Top Rated</li>
+                        <li class="item4">Trending</li>
+                        <li class="item5">Upcoming</li>
+                        <li class="item6"><a href="#contact" class="text-decoration-none text-white">Contact Us</a></li>
+                    </ul>
+            </div>
+            <div class="socials-links visually-hidden">
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5">
+        <div class="row d-flex m-auto w-75">
+            <div class="col-md-6">
+                <div>
+                    <input type="text" class="form-control searchByWord" placeholder="Search for movies by word...">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <input type="text" class="form-control search" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+        <div class="moviesCont w-75 m-auto my-5">
+            <div class="row gap">
+
+            </div>
+
+        </div>
+    </section>
+    <section id="contact" class="text-white py-5 w-75 m-auto">
+        <h2>Contact us...</h2>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 my-3">
+                    <input class="form-control name" type="text" placeholder="Enter Your Name">
+                    <div class="bg-danger text-center validName d-none">Please enter a valid name *Must include first and last name*</div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <input class="form-control email" type="email" placeholder="Enter Your Email">
+                    <div class="bg-danger text-center validEmail d-none">Please enter a valid email </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <input class="form-control phone" type="number" placeholder="Enter Your Phone">
+                    <div class="bg-danger text-center validPhone d-none">Please enter a valid phone number *Must be 11 number*</div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <input class="form-control age" type="number" placeholder="Enter Your Age">
+                    <div class="bg-danger text-center validAge d-none">You must be at least 16 years old</div>
+                </div>
+                <div class="col-md-6 my-3 position-relative">
+                    <input class="form-control password" type="password" placeholder="Enter Password">
+                    <div class="position-absolute showPassword"><i class="fa-solid fa-lock"></i></div>
+                    <div class="bg-danger text-center validPass d-none">Password must be between 6-16 characters and contains at least 1 number, and 1 special character</div>
+                </div>
+                <div class="col-md-6 my-3 position-relative">
+                    <input class="form-control confirm" type="password" placeholder="Confirm Password">
+                    <div class="position-absolute showPassword2"><i class="fa-solid fa-lock"></i></div>
+                    <div class="bg-danger text-center validConfirm d-none">Password doesn't match</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-outline-danger mt-4 submit grayed">Submit</button>
+    </section>
+
+    <script src="javascript/jquery-3.6.0.js"></script>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/wow.min.js"></script>
+    <script src="javascript/app.js"></script>
+</body>
+</html>
